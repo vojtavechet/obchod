@@ -105,12 +105,18 @@ while notFinished:
                 tvrdok = False              
        
 
-
     
     if (menu == 4):
-        print( polozky)
+        print("")
+        poce = {}
+        for znak in polozky:
+            poce[znak] = poce.get(znak, 0)+1
+        for znak,pocet in poce.items():
+            print( str(znak) + " je " + str(pocet)+ "x")
+
+
         soucet = sum(celkem_cene)
-        print(soucet)
+        print("CENA CELKEM " + str(soucet))
         notFinished = False
 
 
